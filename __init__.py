@@ -7,7 +7,7 @@ import cv2
 app = Flask(__name__)
 
 MODEL = tf.keras.models.load_model(
-    "./_function InceptionV3 at 0x7f1b06a7f7a0__1.h5")
+    "model.h5")
 CLASS_NAMES = [
     'Pepper__bell___Bacterial_spot',
     'Pepper__bell___healthy',
