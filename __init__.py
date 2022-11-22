@@ -41,7 +41,7 @@ def upload():
     if request.method == 'POST':
         file = request.files['img']
         image = read_file_as_image(file.read())
-        output = cv2.resize(image, (224, 224))
+        output = cv2.resize(image, (256, 256))
         img_batch = np.expand_dims(output, 0)
         predictions = MODEL.predict(img_batch)
         predicted_class = CLASS_NAMES[np.argmax(predictions[0])]
